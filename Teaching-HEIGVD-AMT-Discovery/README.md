@@ -15,8 +15,9 @@ Installation is really straightforward with Docker-Compose.
 
 1. Clone this repo
 2. Build the application to generate the war file. We could not upload it on github because it was too heavy.
-2. Open a Docker terminal and move to the topology-amt folder.
-3. Execute the following commands : 
+3. Place it in Teaching-HEIGVD-AMT-Discovery/images/wildfly/data/
+4. Open a Docker terminal and move to the topology-amt folder.
+5. Execute the following commands : 
 `docker-compose down` 
 `docker-compose up`
 
