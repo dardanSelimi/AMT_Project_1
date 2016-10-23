@@ -24,9 +24,9 @@ public class UserManager implements UserManagerLocal {
    @Resource(lookup = "jdbc/users")
    private DataSource dataSource;
    /***
-    * 
+    * Insert a user in the database
     * @param user
-    * @return 
+    * @return the user freshly added
     */
    @Override
    public User insertUser(User user) {
@@ -51,10 +51,10 @@ public class UserManager implements UserManagerLocal {
       return null;
    }
    /***
-    * 
+    * Get a user from the DB
     * @param value
-    * @param field
-    * @return 
+    * @param field which field to get (firstname, lastname, email, password or id)
+    * @return a specific user
     */
    @Override
    public User getUser(String value, String field) {
@@ -81,8 +81,8 @@ public class UserManager implements UserManagerLocal {
       return user;
    }
    /***
-    * 
-    * @return 
+    * Get the list of all users 
+    * @return the list of all the users
     */
    @Override
    public List<User> getAllUsers() {
@@ -108,7 +108,7 @@ public class UserManager implements UserManagerLocal {
       return users;
    }
    /***
-    * 
+    * Delete a user by its lastname
     * @param lastName
     * @return 
     */
@@ -131,7 +131,7 @@ public class UserManager implements UserManagerLocal {
       return result;
    }
    /***
-    * 
+    * Checking if a user exists with its email.
     * @param email
     * @return 
     */
@@ -140,7 +140,7 @@ public class UserManager implements UserManagerLocal {
       return getUser(email, "email").getLastName() != null;
    }
    /***
-    * 
+    * Checking if a user exists with its password
     * @param password
     * @return 
     */
@@ -159,7 +159,7 @@ public class UserManager implements UserManagerLocal {
       return field.length() <= size;
    }
    /***
-    * Match the 
+    * Match the email with the pattern used by the application to allow or not
     * @param email
     * @return 
     */
