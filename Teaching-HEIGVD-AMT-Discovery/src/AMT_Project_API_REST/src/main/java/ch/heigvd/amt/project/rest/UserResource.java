@@ -167,29 +167,6 @@ public class UserResource {
          return new UserDTO("Unknown", "Unknown", "Email already exists");
 
       }
-      /* Empty fileds errors 
-      if (toChange.getFirstName().isEmpty() || toChange.getLastName().isEmpty()
-              || toChange.getEmail().isEmpty() || toChange.getPassword().isEmpty()) {
-      }*/
-      /* The email input by the user has a the wrong format 
-      if (!userManager.checkEmailFormat(toChange.getEmail())
-              || !userManager.checkField(toChange.getEmail(), Utils.MAX_SIZE)
-              && userManager.checkField(toChange.getEmail(), Utils.MIN_SIZE_PWD)) {
-         return new UserDTO("Unknown", "Unknown", "Email already exists");
-
-      }*/
-      /* Wrong size for the password input. Check the Utils class for more 
-         information about the allowed size 
-      if (!userManager.checkField(toChange.getPassword(), Utils.MAX_SIZE)
-              || userManager.checkField(toChange.getPassword(), Utils.MIN_SIZE_PWD)) {
-         return new UserDTO("Unknown", "Unknown", "Email already exists");
-      }*/
-      /* If no errors occured, the users is created 
-      if (userManager.getUser(toChange.getEmail(), "email").getEmail() == null) {
-         userManager.insertUser(toChange);
-                  return new UserDTO("Unknown", "Unknown", "Email already exists");
-
-      }*/
       userManager.removeUser(lastName);
       user.setFirstName(toChange.getFirstName());
       user.setLastName(toChange.getLastName());
