@@ -30,27 +30,36 @@ Useful URLs :
 *This address depends on the docker environment. Please verify it*
 
 ## Project Structure
-// Parler de l'API rest et d'autre choses...
 
-- Database. MySQL Database with the following structure :  
 
   id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT
+  
   firstName VARCHAR(45) NOT NULL
+  
   lastName VARCHAR(45) NOT NULL
+  
   email VARCHAR(45) NOT NULL
+  
   _password VARCHAR(45) NOT NULL
   
-- Postman
+  
+## Postman
 This script can be used to test the API REST:
 
 Script_AMT_Albasini_Selimi.postman_collection.json
 
-- REST API - CRUD
+## REST API - CRUD
+
 Entrypoints implemented:
+
 @GET Two versions are implemented. The first get can the list of all the users and the second one gives the possibility of retreiving a user by its lastname.
+
 @POST Add a user in the structure (database).
+
 @PUT Update one user's personal data.
+
 @DELETE Delete a user.
+
 
 
 
