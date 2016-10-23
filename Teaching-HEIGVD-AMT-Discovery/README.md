@@ -14,6 +14,7 @@ The whole project relies on Docker images and on a Docker Compose topology. The 
 Installation is really straightforward with Docker-Compose.
 
 1. Clone this repo
+2. Build the application to generate the war file. We could not upload it on github because it was too heavy.
 2. Open a Docker terminal and move to the topology-amt folder.
 3. Execute the following commands : 
 `docker-compose down` 
